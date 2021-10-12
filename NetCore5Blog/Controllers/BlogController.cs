@@ -19,6 +19,7 @@ namespace NetCore5Blog.Controllers
         }
         public IActionResult BlogReadAll(int id)
         {
+            ViewBag.i = id;
             var values = bm.GetBlogById(id);
             return View(values);
         }
